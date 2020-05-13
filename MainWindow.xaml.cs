@@ -1,4 +1,23 @@
-﻿
+﻿/*
+   Code history
+     0001
+   Date
+     13th May, 2020.
+   Programmer
+     Pye Sone Aung Myint Htay
+   Project name:
+     project Zeus ( test software for Dentists )
+   Version
+     20.05
+   Copyright:
+     (c)hopeelectronics, 2020.
+   Revision History:
+     13.05.2020:	upload my old project to GIT 
+   Description:
+     Software for dentists
+   NOTES:
+     
+*/
 
 using MySql.Data.MySqlClient;
 using System;
