@@ -12,7 +12,8 @@
    Copyright:
      (c)hopeelectronics, 2020.
    Revision History:
-     13.05.2020:	upload my old project to GIT 
+     13.05.2020:	upload my old project to GIT
+                    test brench timo
    Description:
      Software for dentists
    NOTES:
