@@ -1,0 +1,14 @@
+﻿/*
+	SignIn:20:00 13th May, 2020.
+			
+			Study difference between .net FrameWork and .net core
+			Prefer	.net framework for desktop app
+					.net core for light weight
+			.net framework support WCF service
+			WCF(Windows Communicationn Foundation) service
+			
+			Test GitHub
+			make branch timo's
+
+	SignOut:23:17 13th May, 2020	
+*/

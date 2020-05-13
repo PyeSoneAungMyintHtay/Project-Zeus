@@ -321,5 +321,8 @@
   <ItemGroup>
     <Resource Include="mi-PC.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="note.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

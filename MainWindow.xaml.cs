@@ -12,12 +12,13 @@
    Copyright:
      (c)hopeelectronics, 2020.
    Revision History:
-     13.05.2020:	upload my old project to GIT
-                    this is timo
+     13.05.2020:    upload my old project to GIT
+                    make a branch timo's
+                    
    Description:
      Software for dentists
    NOTES:
-     
+     Read on note.txt
 */
 
 using MySql.Data.MySqlClient;
