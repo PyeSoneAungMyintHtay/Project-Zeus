@@ -13,7 +13,7 @@
      (c)hopeelectronics, 2020.
    Revision History:
      13.05.2020:	upload my old project to GIT
-                    test brench timo
+                    This is master
    Description:
      Software for dentists
    NOTES:
