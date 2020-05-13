@@ -1,0 +1,115 @@
+﻿<Page x:Class="single_user_Zeus.current_status"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:single_user_Zeus"
+      mc:Ignorable="d"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="current_status">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="203*" />
+            <RowDefinition Height="247*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1" Margin="10,10,10,10" Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Label Content="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+            <Label Content="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+            <Label Content="3" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+            <Label Content="4" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+            <Label Content="5" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+            <Label Content="6" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+            <Label Content="7" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+            <Label Content="8" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+            <Label Content="9" Grid.Column="8" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+            <Label Content="10" Grid.Column="9" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+            <Label Content="11" Grid.Column="10" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+            <Label Content="12" Grid.Column="11" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+            <Label Content="13" Grid.Column="12" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+            <Label Content="14" Grid.Column="13" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+            <Label Content="15" Grid.Column="14" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+            <Label Content="16" Grid.Column="15" HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+
+            <Image x:Name="t1" Source="image/tooth/ur8_1.png" Grid.Column="0" MouseLeftButtonUp="t1_MouseLeftButtonUp" />
+            <Image x:Name="t2" Source="image/tooth/ur7_2.png" Grid.Column="1" MouseLeftButtonUp="t2_MouseLeftButtonUp" />
+            <Image x:Name="t3" Source="image/tooth/ur6_3.png" Grid.Column="2" MouseLeftButtonUp="t3_MouseLeftButtonUp" />
+            <Image x:Name="t4" Source="image/tooth/ur5_4.png" Grid.Column="3" MouseLeftButtonUp="t4_MouseLeftButtonUp" />
+            <Image x:Name="t5" Source="image/tooth/ur4_5.png" Grid.Column="4" MouseLeftButtonUp="t5_MouseLeftButtonUp" />
+            <Image x:Name="t6" Source="image/tooth/ur3_6.png" Grid.Column="5" MouseLeftButtonUp="t6_MouseLeftButtonUp" />
+            <Image x:Name="t7" Source="image/tooth/ur2_7.png" Grid.Column="6" MouseLeftButtonUp="t7_MouseLeftButtonUp" />
+            <Image x:Name="t8" Source="image/tooth/ur1_8.png" Grid.Column="7" MouseLeftButtonUp="t8_MouseLeftButtonUp" />
+            <Image x:Name="t9" Source="image/tooth/ul1_9.png" Grid.Column="8" MouseLeftButtonUp="t9_MouseLeftButtonUp" />
+            <Image x:Name="t10" Source="image/tooth/ul2_10.png" Grid.Column="9" MouseLeftButtonUp="t10_MouseLeftButtonUp" />
+            <Image x:Name="t11" Source="image/tooth/ul3_11.png" Grid.Column="10" MouseLeftButtonUp="t11_MouseLeftButtonUp" />
+            <Image x:Name="t12" Source="image/tooth/ul4_12.png" Grid.Column="11" MouseLeftButtonUp="t12_MouseLeftButtonUp" />
+            <Image x:Name="t13" Source="image/tooth/ul5_13.png" Grid.Column="12" MouseLeftButtonUp="t13_MouseLeftButtonUp" />
+            <Image x:Name="t14" Source="image/tooth/ul6_14.png" Grid.Column="13" MouseLeftButtonUp="t14_MouseLeftButtonUp" />
+            <Image x:Name="t15" Source="image/tooth/ul7_15.png" Grid.Column="14" MouseLeftButtonUp="t15_MouseLeftButtonUp" />
+            <Image x:Name="t16" Source="image/tooth/ul8_16.png" Grid.Column="15" MouseLeftButtonUp="t16_MouseLeftButtonUp" />
+
+            <Label Grid.Row="1" Content="32" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <Label Grid.Row="1" Content="31" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <Label Grid.Row="1" Content="30" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <Label Grid.Row="1" Content="29" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <Label Grid.Row="1" Content="28" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <Label Grid.Row="1" Content="27" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <Label Grid.Row="1" Content="26" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <Label Grid.Row="1" Content="25" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <Label Grid.Row="1" Content="24" Grid.Column="8" HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <Label Grid.Row="1" Content="23" Grid.Column="9" HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <Label Grid.Row="1" Content="22" Grid.Column="10" HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <Label Grid.Row="1" Content="21" Grid.Column="11" HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <Label Grid.Row="1" Content="20" Grid.Column="12" HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <Label Grid.Row="1" Content="19" Grid.Column="13" HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <Label Grid.Row="1" Content="18" Grid.Column="14" HorizontalAlignment="Center" VerticalAlignment="Top" />
+            <Label Grid.Row="1" Content="17" Grid.Column="15" HorizontalAlignment="Center" VerticalAlignment="Top" />
+
+            <Image x:Name="t24" Grid.Row="1" Grid.Column="8" Source="image/tooth/24/ll1_24_nomal.png" MouseLeftButtonUp="t24_MouseLeftButtonUp"  />
+            <!-- x:Name="t24" Source="image/tooth/24/ll1_24_nomal.png" MouseLeftButtonUp="t24_MouseLeftButtonUp"-->
+            <Image x:Name="t23" Source="image/tooth/ll2_23.png" Grid.Row="1" Grid.Column="9" />
+            <Image x:Name="t22" Source="image/tooth/ll3_22.png" Grid.Row="1" Grid.Column="10" />
+            <Image x:Name="t21" Source="image/tooth/ll4_21.png" Grid.Row="1" Grid.Column="11" />
+            <Image x:Name="t20" Source="image/tooth/ll5_20.png" Grid.Row="1" Grid.Column="12" />
+            <Image x:Name="t19" Source="image/tooth/ll6_19.png" Grid.Row="1" Grid.Column="13" />
+            <Image x:Name="t18" Source="image/tooth/ll7_18.png" Grid.Row="1" Grid.Column="14" />
+            <Image x:Name="t17" Source="image/tooth/ll8_17.png" Grid.Row="1" Grid.Column="15" />
+
+            <Image x:Name="t25" Source="image/tooth/lr1_25.png" Grid.Row="1" Grid.Column="7" />
+            <Image x:Name="t26" Source="image/tooth/lr2_26.png" Grid.Row="1" Grid.Column="6" />
+            <Image x:Name="t27" Source="image/tooth/lr3_27.png" Grid.Row="1" Grid.Column="5" />
+            <Image x:Name="t28" Source="image/tooth/lr4_28.png" Grid.Row="1" Grid.Column="4" />
+            <Image x:Name="t29" Source="image/tooth/lr5_29.png" Grid.Row="1" Grid.Column="3" />
+            <Image x:Name="t30" Source="image/tooth/lr6_30.png" Grid.Row="1" Grid.Column="2" />
+            <Image x:Name="t31" Source="image/tooth/lr7_31.png" Grid.Row="1" Grid.Column="1" />
+            <Image x:Name="t32" Source="image/tooth/lr8_32.png" Grid.Row="1" Grid.Column="0" />
+        </Grid>
+        <Label Content="Maxillary Right" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Margin="50,10,0,0" />
+        <Label Content="Maxillary Left" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Row="1" Margin="0,10,50,0" />
+        <Label Content="Mandibular Left" HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="1" Margin="0,0,50,10" />
+        <Label Content="Mandibular Right" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="1" Margin="50,0,0,10" />
+    </Grid>
+</Page>

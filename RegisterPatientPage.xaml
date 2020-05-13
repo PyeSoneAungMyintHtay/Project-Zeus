@@ -1,0 +1,60 @@
+﻿<Page x:Class="single_user_Zeus.RegisterPatientPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:single_user_Zeus"
+      mc:Ignorable="d"
+      d:DesignHeight="600"
+      d:DesignWidth="1200"
+      Title="RegisterPatientPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="79*" />
+            <ColumnDefinition Width="41*" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0*" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Label Content="Patient Name" HorizontalAlignment="Left" Margin="0,50,0,0" VerticalAlignment="Top" FontSize="14.667" Grid.ColumnSpan="2" Height="29.507" Width="97.393" />
+            <Label Content="Age" HorizontalAlignment="Left" Margin="0,100,0,0" VerticalAlignment="Top" FontSize="14.667" Grid.ColumnSpan="2" Height="29.507" Width="35.767" />
+            <Label Content="Blood Group" HorizontalAlignment="Left" Margin="0,146,0,0" VerticalAlignment="Top" FontSize="14.667" Grid.ColumnSpan="2" Height="29.507" Width="92.48" />
+            <Label Content="Address" HorizontalAlignment="Left" Margin="0,207,0,0" VerticalAlignment="Top" FontSize="14.667" Grid.ColumnSpan="2" Height="29.507" Width="61.95" />
+            <TextBox x:Name="patient_contact_no2" Visibility="Visible" HorizontalAlignment="Left" TabIndex="1" Height="25" Margin="101,2,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" FontSize="14.667" TextChanged="patient_contact_no2_TextChanged" Grid.Column="1" />
+            <TextBox x:Name="patient_name" IsEnabled="False" HorizontalAlignment="Left" Height="25" Margin="101,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" FontSize="14.667" TextChanged="patient_name_TextChanged" Grid.Column="1" />
+            <TextBox x:Name="patient_age" IsEnabled="False" HorizontalAlignment="Left" Height="25" Margin="101,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" FontSize="14.667" TextChanged="patient_age_TextChanged" Grid.Column="1" />
+            <ComboBox x:Name="comboboxBloodGroup" IsEnabled="False" HorizontalAlignment="Left" Height="25" Margin="101,148,0,0" VerticalAlignment="Top" Width="90" FontSize="14.667" SelectionChanged="comboboxBloodGroup_SelectionChanged" Grid.Column="1" />
+            <TextBox x:Name="patient_address" IsEnabled="False" HorizontalAlignment="Left" Height="39" Margin="101,202,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="238" FontSize="14.667" Grid.Column="1" />
+            <ComboBox x:Name="comboboxPatient_sex" HorizontalAlignment="Left" Height="25" Margin="101,312,0,0" VerticalAlignment="Top" Width="90" FontSize="14.667" SelectionChanged="comboboxPatient_sex_SelectionChanged" Grid.Column="1" />
+            <TextBox x:Name="referred_by" IsEnabled="False" HorizontalAlignment="Left" Height="25" Margin="101,362,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" FontSize="14.667" SelectionChanged="referred_by_SelectionChanged" Grid.Column="1" />
+            <TextBox x:Name="patient_occupation" IsEnabled="False" HorizontalAlignment="Left" Height="25" Margin="101,412,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156" FontSize="14.667" Grid.Column="1" />
+
+            <Button x:Name="button" Content="Register" HorizontalAlignment="Left" Margin="51,463,0,0" VerticalAlignment="Top" Width="137" Height="49"  FontSize="14.667" Click="button_Click" Grid.Column="1" />
+            <Button x:Name="button_delete" Content="Delete" HorizontalAlignment="Left" Margin="51,526,0,0" VerticalAlignment="Top" Width="137" Height="49"  FontSize="14.667" Click="button_delete_Click" RenderTransformOrigin="0.013,2.845" Grid.Column="1" />
+            <Button x:Name="button_update" Content="Update" HorizontalAlignment="Left" Margin="199,463,0,0" VerticalAlignment="Top" Width="137" Height="49" FontSize="14.667" Click="button_update_Click" Grid.Column="1" />
+            <DatePicker x:Name="datepicker" HorizontalAlignment="Left" Height="25" Margin="101,262,0,0" VerticalAlignment="Top" Width="155" FontSize="14.667" Grid.Column="1" />
+
+            <Label  Content="Phone No" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14.667" Grid.ColumnSpan="2" Height="29.507" Width="74.657" />
+            <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" Height="49" Margin="199,525,0,0" VerticalAlignment="Top" Width="137" FontSize="14.667" Click="btnExit_Click" Grid.Column="1" />
+            <Label Content="Date" HorizontalAlignment="Left" Margin="0,260,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.594,-3.981" FontSize="14.667" Grid.ColumnSpan="2" Height="29.507" Width="40.387" />
+            <Label Content="Sex" HorizontalAlignment="Left" Margin="0,310,0,0" VerticalAlignment="Top" FontSize="14.667" Grid.ColumnSpan="2" Height="29.507" Width="32.197" />
+            <Label Content="Referred By" HorizontalAlignment="Left" Margin="0,360,0,0" VerticalAlignment="Top" FontSize="14.667" Grid.ColumnSpan="2" Height="29.507" Width="84.3" />
+            <Label Content="Occupation" HorizontalAlignment="Left" Margin="0,410,0,0" VerticalAlignment="Top" FontSize="14.667" Grid.ColumnSpan="2" Height="29.507" Width="84.407" />
+        </Grid>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="7*" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0">
+                <TextBox x:Name="patient_ID" IsEnabled="False" HorizontalAlignment="Left" TabIndex="1" Height="25" Margin="86,3,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" FontSize="14.667" />
+                <Label Content="Patient ID" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14.667" />
+            </Grid>
+            <DataGrid x:Name="DataGridDoc" SelectionChanged="DataGridDoc_SelectionChanged" Grid.Row="0" Margin="0,0,10,0" />
+        </Grid>
+        
+    </Grid>
+</Page>

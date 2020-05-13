@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BBA4D0F2-41F1-4C05-A3B9-A702AC08660C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>single_user_Zeus</RootNamespace>
+    <AssemblyName>single user Zeus</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>mi-PC.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.5.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>packages\BouncyCastle.1.8.5\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.11.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Protobuf.3.11.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.18.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.0.18\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySqlBackup, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MySqlBackup.NET.2.3.1\lib\net452\MySqlBackup.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ChangeAdminPasswordPage.xaml.cs">
+      <DependentUpon>ChangeAdminPasswordPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="current_status.xaml.cs">
+      <DependentUpon>current_status.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="diagnosisPage.xaml.cs">
+      <DependentUpon>diagnosisPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="medicinePage.xaml.cs">
+      <DependentUpon>medicinePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="patientTreatment.xaml.cs">
+      <DependentUpon>patientTreatment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterPatientPage.xaml.cs">
+      <DependentUpon>RegisterPatientPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="single_user.xaml.cs">
+      <DependentUpon>single_user.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ToothStatusWindow.xaml.cs">
+      <DependentUpon>ToothStatusWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="treatmentPage.xaml.cs">
+      <DependentUpon>treatmentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="updateDoctorPage.xaml.cs">
+      <DependentUpon>updateDoctorPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="ChangeAdminPasswordPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="current_status.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="diagnosisPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DBConnect.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="medicinePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="patientTreatment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RegisterPatientPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="single_user.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ToothStatusWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="treatmentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="updateDoctorPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\dental-center-header.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\tooth\24\ll1_24.png" />
+    <Resource Include="image\tooth\ll2_23.png" />
+    <Resource Include="image\tooth\ll3_22.png" />
+    <Resource Include="image\tooth\ll4_21.png" />
+    <Resource Include="image\tooth\ll5_20.png" />
+    <Resource Include="image\tooth\ll6_19.png" />
+    <Resource Include="image\tooth\ll7_18.png" />
+    <Resource Include="image\tooth\ll8_17.png" />
+    <Resource Include="image\tooth\lr1_25.png" />
+    <Resource Include="image\tooth\lr2_26.png" />
+    <Resource Include="image\tooth\lr3_27.png" />
+    <Resource Include="image\tooth\lr4_28.png" />
+    <Resource Include="image\tooth\lr5_29.png" />
+    <Resource Include="image\tooth\lr6_30.png" />
+    <Resource Include="image\tooth\lr7_31.png" />
+    <Resource Include="image\tooth\lr8_32.png" />
+    <Resource Include="image\tooth\ul1_9.png" />
+    <Resource Include="image\tooth\ul2_10.png" />
+    <Resource Include="image\tooth\ul3_11.png" />
+    <Resource Include="image\tooth\ul5_13.png" />
+    <Resource Include="image\tooth\ul6_14.png" />
+    <Resource Include="image\tooth\ul7_15.png" />
+    <Resource Include="image\tooth\ul8_16.png" />
+    <Resource Include="image\tooth\ur1_8.png" />
+    <Resource Include="image\tooth\ur2_7.png" />
+    <Resource Include="image\tooth\ur3_6.png" />
+    <Resource Include="image\tooth\ur4_5.png" />
+    <Resource Include="image\tooth\ur5_4.png" />
+    <Resource Include="image\tooth\ur6_3.png" />
+    <Resource Include="image\tooth\ur7_2.png" />
+    <Resource Include="image\tooth\ur8_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\tooth\ur8_1_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\tooth\ur7_2_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\tooth\ur6_3_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\tooth\ur5_4_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\tooth\ur4_5_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\tooth\lr8_32_10.png" />
+    <Resource Include="image\tooth\ul1_9_10.png" />
+    <Resource Include="image\tooth\ul2_10_10.png" />
+    <Resource Include="image\tooth\ul3_11_10.png" />
+    <Resource Include="image\tooth\ul5_13_10.png" />
+    <Resource Include="image\tooth\ul6_14_10.png" />
+    <Resource Include="image\tooth\ul7_15_10.png" />
+    <Resource Include="image\tooth\ul8_16_10.png" />
+    <Resource Include="image\tooth\ur1_8_10.png" />
+    <Resource Include="image\tooth\ur2_7_10.png" />
+    <Resource Include="image\tooth\ur3_6_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\tooth\ul4_12.png" />
+    <Resource Include="image\tooth\ul4_12_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\tooth\24\ll1_24_10.png" />
+    <Resource Include="image\tooth\ll2_23_10.png" />
+    <Resource Include="image\tooth\ll3_22_10.png" />
+    <Resource Include="image\tooth\ll4_21_10.png" />
+    <Resource Include="image\tooth\ll5_20_10.png" />
+    <Resource Include="image\tooth\ll6_19_10.png" />
+    <Resource Include="image\tooth\ll7_18_10.png" />
+    <Resource Include="image\tooth\ll8_17_10.png" />
+    <Resource Include="image\tooth\lr1_25_10.png" />
+    <Resource Include="image\tooth\lr2_26_10.png" />
+    <Resource Include="image\tooth\lr3_27_10.png" />
+    <Resource Include="image\tooth\lr4_28_10.png" />
+    <Resource Include="image\tooth\lr5_29_10.png" />
+    <Resource Include="image\tooth\lr6_30_10.png" />
+    <Resource Include="image\tooth\lr7_31_10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="image\tooth\t1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\tooth\24\ll1_24_Ac.png" />
+    <Resource Include="image\tooth\24\ll1_24_Ac_nomal.png" />
+    <Resource Include="image\tooth\24\ll1_24_NiC.png" />
+    <Resource Include="image\tooth\24\ll1_24_NiC_nomal.png" />
+    <Resource Include="image\tooth\24\ll1_24_nomal.png" />
+    <Resource Include="image\tooth\24\ll1_24_PFM.png" />
+    <Resource Include="image\tooth\24\ll1_24_PFM_nomal.png" />
+    <Resource Include="image\tooth\24\ll1_24_PoC.png" />
+    <Resource Include="image\tooth\24\ll1_24_PoC_nomal.png" />
+    <Resource Include="image\tooth\24\ll1_24_Zr.png" />
+    <Resource Include="image\tooth\24\ll1_24_Zr_nomal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\tooth\24\ll1_24_Bdg.png" />
+    <Resource Include="image\tooth\24\ll1_24_support.png" />
+    <Resource Include="image\tooth\24\ll1_24_support_nomal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\tooth\24\ll1_24_implant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\Untitled-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="mi-PC.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

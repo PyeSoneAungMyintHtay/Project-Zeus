@@ -1,0 +1,35 @@
+﻿<Page x:Class="single_user_Zeus.medicinePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:single_user_Zeus"
+      mc:Ignorable="d"
+      d:DesignHeight="600" d:DesignWidth="1200"
+      Title="medicinePage">
+
+    <Grid>
+        <Label Content="Drug ID" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14.667" Margin="847,14,0,0" />
+        <Label  Content="Drug name" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14.667" Margin="847,61,0,0" />
+        <Label Content="Expire date" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14.667" Margin="847,117,0,0" />
+        <Label Content="Buy price" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14.667" Margin="847,169,0,0" />
+        <Label Content="Sell price" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14.667" Margin="847,219,0,0" />
+        <Label Content="Quantity" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14.667" Margin="847,269,0,0" />
+        <Label Content="Drug type" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14.667" Margin="847,319,0,0" />
+        <TextBox x:Name="drug_ID"  HorizontalAlignment="Left" TabIndex="1" Height="25" Margin="967,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="103" FontSize="14.667" TextChanged="drug_ID_TextChanged" />
+        <TextBox x:Name="drug_name" IsEnabled="False" HorizontalAlignment="Left" TabIndex="1" Height="29" Margin="967,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" FontSize="14.667" TextChanged="drug_name_TextChanged" />
+        <TextBox x:Name="expire_date" IsEnabled="False" HorizontalAlignment="Left" TabIndex="1" Height="29" Margin="967,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" FontSize="14.667" TextChanged="expire_date_TextChanged" />
+
+        <TextBox x:Name="buy_price" IsEnabled="False" HorizontalAlignment="Left" Height="25" Margin="967,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" FontSize="14.667" TextChanged="buy_price_TextChanged" />
+        <TextBox x:Name="sell_price" IsEnabled="False" HorizontalAlignment="Left" Height="25" Margin="967,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" FontSize="14.667" TextChanged="sell_price_TextChanged" />
+        <TextBox x:Name="quantity" IsEnabled="False" HorizontalAlignment="Left" Height="25" Margin="967,271,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" FontSize="14.667" TextChanged="quantity_TextChanged" />
+        <TextBox x:Name="drug_type" IsEnabled="False" HorizontalAlignment="Left" Height="25" Margin="967,321,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" FontSize="14.667" />
+
+        <Button x:Name="button_add" Content="Add" HorizontalAlignment="Left" Margin="892,472,0,0" VerticalAlignment="Top" Width="137" Height="49"  FontSize="14.667" Click="button_add_Click" />
+        <Button x:Name="button_delete" Content="Delete" HorizontalAlignment="Left" Margin="892,535,0,0" VerticalAlignment="Top" Width="137" Height="49"  FontSize="14.667" RenderTransformOrigin="0.013,2.845" Click="button_delete_Click" />
+        <Button x:Name="button_update" Content="Update" HorizontalAlignment="Left" Margin="1040,472,0,0" VerticalAlignment="Top" Width="137" Height="49" FontSize="14.667" Click="button_update_Click" />
+        <Button x:Name="btnExit" Content="Exit" HorizontalAlignment="Left" Height="49" Margin="1040,534,0,0" VerticalAlignment="Top" Width="137" FontSize="14.667" Click="btnExit_Click" />
+
+        <DataGrid x:Name="DataGridDoc" HorizontalAlignment="Left" Height="511" Margin="8,9,0,0" VerticalAlignment="Top" Width="803" SelectionChanged="DataGridDoc_SelectionChanged" />
+    </Grid>
+</Page>
