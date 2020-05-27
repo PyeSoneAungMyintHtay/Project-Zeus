@@ -19,7 +19,7 @@
    NOTES:
      
 */
-
+#define single_user
 using MySql.Data.MySqlClient;
 using System;
 using System.Windows;
@@ -42,7 +42,13 @@ namespace single_user_Zeus
             timer.Tick += timer_Tick;
             timer.Start();
 
+#if (single_user)
             combobox.Items.Add("Single_User");
+#else
+            combobox.Items.Add("Adminstrator");
+            combobox.Items.Add("Doctor");
+            combobox.Items.Add("Staff");
+#endif
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -91,7 +97,7 @@ namespace single_user_Zeus
                     if (MyReader2.Read())
                     {
                         MessageBox.Show("You have succesfully logged in");
-                        single_user objSingleWindow = new single_user();
+                        single_user_window objSingleWindow = new single_user_window();// single_user();
                         objSingleWindow.Show();
                         this.Close();
                     }

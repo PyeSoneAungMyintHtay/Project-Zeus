@@ -1,0 +1,30 @@
+﻿<Window x:Class="single_user_Zeus.single_user_window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:HamburgerMenu="clr-namespace:HamburgerMenu;assembly=HamburgerMenu"
+        xmlns:local="clr-namespace:single_user_Zeus"
+        mc:Ignorable="d"
+        Title="single user"
+        WindowStartupLocation="CenterScreen"
+        Width="{DynamicResource {x:Static SystemParameters.MaximizedPrimaryScreenWidthKey}}"
+        Height="{DynamicResource {x:Static SystemParameters.MaximizedPrimaryScreenHeightKey}}">
+
+    <Window.Background>
+        <ImageBrush ImageSource="image/dental-center-header.jpg" />
+    </Window.Background>
+    <Grid>
+        <HamburgerMenu:HamburgerMenu Background="AliceBlue" MenuIconColor="White" SelectionIndicatorColor="White" MenuItemForeground="Black" HorizontalAlignment="Left" Grid.IsSharedSizeScope="True" >
+            <HamburgerMenu:HamburgerMenuItem Icon="image/home.png" Text="Home" SelectionCommand="{Binding ElementName=this_}"/>
+            <HamburgerMenu:HamburgerMenuItem Icon="image/png/DentistF.png" Text="Update Doctor's Profile" Selected="HamburgerMenuItem_Selected_4"/>
+            <HamburgerMenu:HamburgerMenuItem Icon="image/png/PatientM.png" Text="Roll/UnRoll Patient" Selected="HamburgerMenuItem_Selected_2"/>
+            <HamburgerMenu:HamburgerMenuItem Icon="image/png/Equipment-Capsule-Red-icon.png" Text="Add/Delete Medicine" Selected="HamburgerMenuItem_Selected_3" />
+            <HamburgerMenu:HamburgerMenuItem Icon="image/png/wrenk.png" Text="Update password" Selected="HamburgerMenuItem_Selected_1"/>
+            <HamburgerMenu:HamburgerMenuItem Icon="image/png/locked.ico" Text="logout" Selected="HamburgerMenuItem_Selected"/>
+        </HamburgerMenu:HamburgerMenu>
+        <Label x:Name="lblTime" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="Auto" Width="Auto" Margin="0" />
+        
+        <Frame x:Name="adminFrame" NavigationUIVisibility="Hidden" Content="" Margin="249,0,0,-0.2" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom" Width="1300" />
+    </Grid>
+</Window>
